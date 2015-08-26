@@ -1,0 +1,64 @@
+set! ui.caretWidth=2
+
+set wildoptions=auto
+
+set complete=sl
+
+set hintmatching=custom
+
+set ignorecase
+
+:highlight Hint font-size:120%;color:white;background-color:black;padding:1px;
+
+set titlestring=takahide
+
+set verbose=9
+
+set nobeep
+
+set wildmode=list:full
+
+map <C-c> :echo Yank!<CR>Y
+
+map j 3<C-e>
+map k 3<C-y>
+noremap J <C-d>
+noremap K <C-u>
+
+map <BS> <A-Left>
+
+map <Left> gT
+map <Right> gt
+
+map H <A-Left>
+map L <A-Right>
+
+set hintchars=fjdksla
+
+set editor='/usr/bin/vim'
+
+qmark m https://mail.google.com/
+qmark g http://google.com/
+qmark f http://www.facebook.com/
+qmark q https://www.qa.indeed.net/
+qmark i https://www.qa.indeed.net/cmp/indeed
+qmark p http://www.indeed.com/
+qmark w https://wiki.indeed.com/
+qmark v http://vimperator.blog9.fc2.com/blog-category-18.html
+qmark c http://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&ved=0CEQQFjAB&url=http%3A%2F%2Fmail.office365.com%2F&ei=Y0MoUpyqI8SxkgWCkIDYBA&usg=AFQjCNGLuqw5OVYVUE07yea2rYPCGQrTnA&bvm=bv.51773540,d.dGI
+qmark j https://bugs.indeed.com/secure/IssueNavigator.jspa?mode=hide&requestId=18564
+qmark t http://twitter.com/
+qmark d javascript:(function(d,l,i){i=d.createElement('iframe');i.src='/private/debugBar/enable';i.style.display='none';i.onload=function(){l.reload();};d.body.appendChild(i);})(document,location);
+
+echo .vimperatorrc sourced
+
+"============================
+" colorscheme
+"============================
+" デフォルトのヒント派手すぎ＞＜
+hi Hint font-family: Arial; font-size: 21px; font-weight: bold; text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black; color: #ffffff;
+hi HintElem color: gray; background-color: #a1e4e6;
+hi HintActive color: black; background-color: #ff8700;
+
+" デフォルトのエラー赤くてこわい＞＜
+hi ErrorMsg color:white; background-color: #ec6aa1;"

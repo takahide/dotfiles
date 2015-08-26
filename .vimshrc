@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+alias dl="cd ~/Downloads"
+alias ff="open -a Firefox"
+
+alias ls='ls -G'
+alias ll='ls -Gl'
+alias la='ls -Ga'
+
+alias lh='cd /Library/Webserver/Documents/'
+
+alias mvim="mvim --remote-tab-silent"
+
+=======
+alias s="~/qa/tools/select_server.sh"
+>>>>>>> 611f9947e993c573844b2bf8f7642b24813c601a
