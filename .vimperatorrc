@@ -4,7 +4,7 @@ set wildoptions=auto
 
 set complete=sl
 
-set hintmatching=custom
+"set hintmatching=custom
 
 set ignorecase
 

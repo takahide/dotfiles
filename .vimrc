@@ -26,9 +26,7 @@ set smartindent "改行時に入力された行の末尾に合わせて次の行
 set imdisable "これで挿入モードから抜ける際、入る際に必ずIMEがオフになります
 
 " http://nanasi.jp/articles/howto/file/seemingly-unneeded-file.html#id7
-set directory=~/.vim/tmp/swap
-set backupdir=~/.vim/tmp/backup
-
+set nobackup
 
 filetype off
 
@@ -36,35 +34,40 @@ filetype off
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
   call neobundle#begin(expand('~/.vim/bundle'))
+
+  " ここにインストールしたいプラグインのリストを書く
+  NeoBundle 'tell-k/vim-browsereload-mac'
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/neocomplete.vim'
+  NeoBundle 'h1mesuke/unite-outline'
+  NeoBundle 'Align'
+  NeoBundle 'kana/vim-surround'
+  NeoBundle 'w0ng/vim-hybrid'
+  NeoBundle 'Shougo/vimshell.vim'
+  NeoBundle 'kana/vim-fakeclip'
+  " NeoBundle 'scrooloose/nerdtree'
+  " NeoBundle 'jistr/vim-nerdtree-tabs'
+  NeoBundle 'cohama/lexima.vim' " 自動的に対応する括弧を入力する
+  NeoBundle 'kchmck/vim-coffee-script'
+  NeoBundle 'slim-template/vim-slim'
+  NeoBundle 'Shougo/vimfiler.vim'
+  NeoBundle 'Shougo/vimproc', {
+        \ 'build' : {
+        \ 'windows' : 'make -f make_mingw32.mak',
+        \ 'cygwin' : 'make -f make_cygwin.mak',
+        \ 'mac' : 'make -f make_mac.mak',
+        \ 'unix' : 'make -f make_unix.mak',
+        \ },
+        \ }
+
+  NeoBundle 'haya14busa/vim-easymotion'
+
   call neobundle#end()
 endif
 
-" ここにインストールしたいプラグインのリストを書く
-NeoBundle 'tell-k/vim-browsereload-mac'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'h1mesuke/unite-outline'
-NeoBundle 'Align'
-NeoBundle 'kana/vim-surround'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'kana/vim-fakeclip'
-" NeoBundle 'scrooloose/nerdtree'
-" NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'cohama/lexima.vim' " 自動的に対応する括弧を入力する
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-    \ 'windows' : 'make -f make_mingw32.mak',
-    \ 'cygwin' : 'make -f make_cygwin.mak',
-    \ 'mac' : 'make -f make_mac.mak',
-    \ 'unix' : 'make -f make_unix.mak',
-  \ },
-\ }
 
-NeoBundle 'haya14busa/vim-easymotion'
+
+
 let g:EasyMotion_leader_key = '<Space><Space>'
 let g:EasyMotion_keys = 'sdflkj'
 let g:EasyMotion_smartcase = 1
@@ -123,7 +126,7 @@ filetype indent on
 
 " crontabの編集を可能に
 " http://weble.org/2011/06/06/mac-cron
-set backupskip=/tmp/*,/private/tmp/*
+"set backupskip=/tmp/*,/private/tmp/*
 
 syntax on
 
