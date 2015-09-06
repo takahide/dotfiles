@@ -226,4 +226,8 @@ alias mg='vim `print_root_dir`/db/migrate/$(ls -t `print_root_dir`/db/migrate | 
 
 alias sakuraip='echo "133.242.179.106"'
 alias gitpush='git add .; git commit -m "something"; git push origin master'
-alias taka="ssh -p 20128 takahide@133.242.179.106"
+
+export SECRET_KEY=6e4b220e0c8327eca033b9bff79c91c8
+export BASIC_USER=yay
+export BASIC_PASS=onisuzume
+
