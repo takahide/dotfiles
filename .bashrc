@@ -198,7 +198,6 @@ stty werase undef
 bind '\C-w:unix-filename-rubout'
 
 alias gitpush='git add .; git commit -m "something"; git push origin master'
-alias takahide="ssh -p 20128 takahide@133.242.179.106"
 
 export SECRET_KEY=6e4b220e0c8327eca033b9bff79c91c8
 export BASIC_USER=yay
